@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import UserTable from './components/UserTable';
+import data from './components/data';
+import { UserProvider } from './UserContext';
+import AddUserForm from './components/AddUserForm';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <div className='container'>
+        <h1>React CRUD App</h1>
+        <div className='flex-row'>
+          <div className='flex-large'>
+            <h2>Add user</h2>
+            <AddUserForm />
+          </div>
+          <div className='flex-large'>
+            <h2>View users</h2>
+            <UserTable />
+          </div>
+        </div>
+      </div>
+    </UserProvider>
   );
-}
+};
 
 export default App;
