@@ -3,8 +3,10 @@ import UserTable from './components/UserTable';
 import data from './components/data';
 import { UserProvider } from './UserContext';
 import AddUserForm from './components/AddUserForm';
+import EditUserForm from './components/EditUserForm';
 
 const App = () => {
+  const [isEditing, setIsEditing] = useState(false);
   return (
     <UserProvider>
       <div className='container'>

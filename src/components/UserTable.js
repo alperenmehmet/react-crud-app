@@ -1,11 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { UserContext } from '../UserContext';
 
 const UserTable = () => {
   const [users, setUsers] = useContext(UserContext);
+  const [edit, setEdit] = useState(false);
 
   const deleteUser = (id) => {
     setUsers(users.filter((user) => user.id !== id));
+  };
+
+  const editUser = (id) => {
+    setEdit(true);
   };
 
   console.log(users);
@@ -26,8 +31,8 @@ const UserTable = () => {
               <td>{user.name}</td>
               <td>{user.username}</td>
               <td>
-                <button>Edit</button>
-                <button onClick={(id) => deleteUser(id)}>Delete</button>
+                <button onClick={editUser}>Edit</button>
+                <button onClick={(id) => deleteUser(user.id)}>Delete</button>
               </td>
             </tr>
           ))

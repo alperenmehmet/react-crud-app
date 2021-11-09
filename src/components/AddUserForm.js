@@ -26,14 +26,14 @@ const AddUserForm = () => {
       <input
         type='text'
         name='name'
-        value={users.name}
+        value={user.name}
         onChange={onSubmitHandler}
       />
       <label>User Name:</label>
       <input
         type='text'
         name='username'
-        value={users.username}
+        value={user.username}
         onChange={onSubmitHandler}
       />
       <button type='submit' onClick={addUser}>
