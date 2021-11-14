@@ -1,13 +1,136 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Mohave&family=Roboto&display=swap%27');
+
+*,
+::before,
+::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --clr-primary: #00fff5;
+  --clr-darker-primary: #00adb5;
+  --clr-dark: #293e46;
+  --clr-darkest: #222831;
+  --clr-white: #fff;
+  --font-primary: 'Mohave';
+  --font-secondary: 'Mochiy Pop P One';
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90vw;
+  max-width: 80rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.user-section {
+  width: 100%;
+}
+
+.my-form {
+  padding: 2rem;
+  background: #d4d4d4;
+  border-radius: 5px;
+}
+
+.my-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.form-control {
+  text-align: right;
+}
+
+.primary-button {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--clr-darker-primary);
+  border: transparent;
+  color: var(--clr-white);
+  cursor: pointer;
+  transition: all 0.3s linear;
+  text-transform: uppercase;
+}
+
+.primary-button:hover {
+  background-color: var(--clr-dark);
+}
+
+.section-title {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.section-title h1 {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+}
+
+.underline {
+  height: 0.25rem;
+  width: 6rem;
+  background: var(--clr-dark);
+  margin: 2rem auto;
+}
+
+.users-container {
+  width: 90%;
+  background: #d4d4d4;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    flex-direction: row;
+  }
+  .form-container {
+    flex-basis: 45%;
+  }
+  .user-wrapper {
+    flex-basis: 45%;
+  }
+  .form-container {
+    margin: 0 auto;
+  }
 }
