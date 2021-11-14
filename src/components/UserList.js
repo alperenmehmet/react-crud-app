@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 const UserList = () => {
   const { users, deleteUser, editUser } = useGlobalContext();
@@ -24,7 +25,7 @@ const UserList = () => {
                   <p>{userName}</p>
                   <div className='action-buttons'>
                     <button type='type' onClick={() => editUser(id)}>
-                      Edit
+                      <FaEdit className='edit-button' />
                     </button>
                     <button
                       type='type'
@@ -32,7 +33,7 @@ const UserList = () => {
                         deleteUser(id);
                       }}
                     >
-                      Delete
+                      <FaTrash className='delete-button' />
                     </button>
                   </div>
                 </li>

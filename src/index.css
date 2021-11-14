@@ -134,3 +134,30 @@ ul {
     margin: 0 auto;
   }
 }
+
+.action-buttons button {
+  border: none;
+  background: #d4d4d4;
+}
+
+.edit-button {
+  justify-content: center;
+  border-style: hidden;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: rgb(82, 82, 214);
+}
+.edit-button:hover {
+  color: blue;
+}
+.delete-button {
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: rgb(224, 93, 93);
+}
+.delete-button:hover {
+  color: red;
+}
